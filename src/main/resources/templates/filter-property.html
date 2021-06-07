@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Property</title>
+
+
+</head>
+<body>
+<h1>PROPERTY TO FILTER:</h1>
+
+<form method="POST" th:action="@{/property/filter}" th:object="${property}">
+
+    <span>SIZE: </span> <input type="text" id="name" th:field ="*{size}">
+    <br><br>
+    <span>PROPERTY_CITY: </span> <input type="text" id="city" th:field ="*{location.city}">
+    <br><br>
+
+    <input type="submit" value="Filter All">
+
+</form>
+</body>
+</html>

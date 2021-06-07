@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Property</title>
+</head>
+<body>
+
+<table border="1">
+    <tr>
+        <td>ID</td>
+        <td>SIZE</td>
+        <td>IMG</td>
+        <td>LOCATION</td>
+    </tr>
+    <tr th:each = "property : ${property}">
+        <td th:text = "${property.getId()}" ></td>
+        <td th:text = "${property.getSize()}" ></td>
+        <td th:text = "${property.getImg()}" ></td>
+        <td th:text = "${property.getLocation()}" ></td>
+    </tr>
+</table>
+
+</body>
+</html>

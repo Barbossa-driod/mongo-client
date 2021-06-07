@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Property</title>
+</head>
+<body>
+
+<table border="1">
+    <tr>
+        <td>ID</td>
+        <td>SIZE</td>
+        <td>IMG</td>
+        <td>LOCATION</td>
+        <td>OPEN PROFILE</td>
+        <td>CHANGE</td>
+        <td>DELETE</td>
+    </tr>
+    <tr th:each = "property : ${property}">
+        <td th:text = "${property.getId()}" ></td>
+        <td th:text = "${property.getSize()}" ></td>
+        <td th:text = "${property.getImg()}" ></td>
+        <td th:text = "${property.getLocation()}" ></td>
+        <td><a th:href="@{property/single/{id}(id=${property.getId()})}">Open Profile</a></td>
+        <td><a th:href = "@{/property/change/{id}(id=${property.getId()})}">Change</a></td>
+        <td><a th:href="@{property/delete/{id}(id=${property.getId()})}">Delete</a></td>
+    </tr>
+</table>
+
+<a th:href="@{/property/create}">Add property</a>
+<br><br>
+<a th:href="@{/property/filter}">Filter property</a>
+<br><br>
+<a th:href="@{/main}">MAIN</a>
+</body>
+</html>

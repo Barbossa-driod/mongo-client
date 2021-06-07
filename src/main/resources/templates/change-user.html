@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+
+
+</head>
+<body>
+<h1>USER TO CHANGE:</h1>
+
+<form method="POST" th:action="@{/user/change}" th:object="${user}">
+
+    <span>ID: </span> <input type="text" id="id" th:field ="*{id}">
+    <br><br>
+    <span>NAME: </span> <input type="text" id="name" th:field ="*{name}">
+    <br><br>
+    <span>SURNAME: </span> <input type="text" id="surname" th:field ="*{surname}">
+    <br><br>
+    <span>AGE: </span> <input type="text" id="age" th:field ="*{age}">
+    <br><br>
+    <span>SEX: </span> <input type="text" id="sex" th:field ="*{sex}">
+    <br><br>
+    <h2>USER PROPERTY:</h2>
+    <span>PROPERTY_ID: </span> <input type="text" id="propertyId" th:field ="*{property.id}">
+    <br><br>
+    <span>PROPERTY_DESCRIPTION: </span> <input type="text" id="desc" th:field ="*{property.description}">
+    <br><br>
+    <span>PROPERTY_IMG: </span> <input type="text" id="img" th:field ="*{property.img}">
+    <br><br>
+    <span>PROPERTY_SIZE: </span> <input type="text" id="size" th:field ="*{property.size}">
+    <br><br>
+    <h3>PROPERTY LOCATION</h3>
+    <span>PROPERTY_CITY: </span> <input type="text" id="city" th:field ="*{property.location.city}">
+    <br><br>
+    <span>PROPERTY_STREET: </span> <input type="text" id="street" th:field ="*{property.location.street}">
+    <br><br>
+    <span>PROPERTY_HOUSE: </span> <input type="text" id="house" th:field ="*{property.location.house}">
+    <br><br>
+
+    <input type="submit" value="Update All">
+
+</form>
+</body>
+</html>

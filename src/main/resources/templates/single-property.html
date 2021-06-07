@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+<body>
+
+<h1>Property:</h1>
+
+<h3>Description: <span th:text="${property.getDescription()}"></span></h3>
+<h3>Location: <span th:text="${property.getLocation()}"></span></h3>
+<h3>Size: <span th:text="${property.getSize()}"></span></h3>
+<h3>Img: <span th:text="${property.getImg()}"></span></h3>
+
+</body>
+</html>

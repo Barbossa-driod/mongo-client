@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Property</title>
+
+
+</head>
+<body>
+<h1>PROPERTY TO CREATE:</h1>
+
+<form method="POST" th:action="@{/property/create}" th:object="${property}">
+
+    <span>NAME: </span> <input type="text" id="name" th:field ="*{size}">
+    <br><br>
+    <span>DESCRIPTION: </span> <input type="text" id="surname" th:field ="*{description}">
+    <br><br>
+    <span>IMG: </span> <input type="text" id="age" th:field ="*{img}">
+    <br><br>
+    <h2>PROPERTY LOCATION:</h2>
+    <span>PROPERTY_CITY: </span> <input type="text" id="city" th:field ="*{location.city}">
+    <br><br>
+    <span>PROPERTY_STREET: </span> <input type="text" id="street" th:field ="*{location.street}">
+    <br><br>
+    <span>PROPERTY_HOUSE: </span> <input type="text" id="house" th:field ="*{location.house}">
+    <br><br>
+
+    <input type="submit" value="Create">
+
+</form>
+</body>
+</html>

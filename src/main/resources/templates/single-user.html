@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+<body>
+
+<h1>User:</h1>
+
+<h3>Name: <span th:text="${user.getName()}"></span></h3>
+<h3>Surname: <span th:text="${user.getSurname()}"></span></h3>
+<h3>Age: <span th:text="${user.getAge()}"></span></h3>
+<h3>Sex: <span th:text="${user.getSex()}"></span></h3>
+<h3>Property: <span th:text="${user.getProperty()}"></span></h3>
+
+</body>
+</html>
